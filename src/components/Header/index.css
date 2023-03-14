@@ -1,0 +1,83 @@
+.small-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c364c;
+  height: 10vh;
+}
+@media screen and (min-width: 768px) {
+  .small-container {
+    display: none;
+  }
+}
+.small-logo {
+  height: 50px;
+  width: 100px;
+  margin-left: 20px;
+}
+.icons-container {
+  margin-right: 40px;
+}
+.home-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: transparent;
+  margin-right: 10px;
+}
+.bag-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: transparent;
+  margin-right: 10px;
+}
+.out-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: transparent;
+}
+.large-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2c364c;
+  height: 15vh;
+}
+@media screen and (max-width: 767px) {
+  .large-container {
+    display: none;
+  }
+}
+.un-container {
+  list-style: none;
+  display: flex;
+}
+.home-item {
+  color: #ffffff;
+  margin-right: 20px;
+  font-size: 30px;
+}
+.jobs-item {
+  color: #ffffff;
+  font-size: 30px;
+}
+.logout-button {
+  text-align: center;
+  background-color: #6366f1;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 120px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+.link-item {
+  text-decoration: none;
+}
