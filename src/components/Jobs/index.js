@@ -220,7 +220,7 @@ class Jobs extends Component {
     return isShowJobsList ? (
       <ul className="jobs-container">
         {jobsList.map(eachJob => (
-          <JobCard details={eachJob} key={eachJob.id} />
+          <JobCard jobDetails={eachJob} key={eachJob.id} />
         ))}
       </ul>
     ) : (
@@ -263,6 +263,39 @@ class Jobs extends Component {
     console.log(input)
     return (
       <>
+        <div className="small-jobs-container">
+          <Header />
+          <div className="search-input-container">
+            <input
+              onChange={this.onEnterSearchInput}
+              value={input}
+              className="search-input"
+              placeholder="Search"
+              type="search"
+            />
+            <button
+              onClick={this.searchInput}
+              type="button"
+              className="btn-search"
+            >
+              <BsSearch className="search-icon" />
+            </button>
+          </div>
+          <div className="profile-container-small">
+            {this.renderProfile()}
+
+            <hr />
+            <div>
+              <FilterGroup
+                employmentTypesList={employmentTypesList}
+                salaryRangesList={salaryRangesList}
+                changeEmployment={this.changeEmployment}
+                changeSalary={this.changeSalary}
+              />
+            </div>
+          </div>
+          <div className="render-jobs-container">{this.renderJobs()}</div>
+        </div>
         <div className="jobs-container">
           <Header />
           <div className="jobs-bottom">
@@ -300,39 +333,6 @@ class Jobs extends Component {
               <div className="render-jobs-container">{this.renderJobs()}</div>
             </div>
           </div>
-        </div>
-        <div className="small-jobs-container">
-          <Header />
-          <div className="search-input-container">
-            <input
-              onChange={this.onEnterSearchInput}
-              value={input}
-              className="search-input"
-              placeholder="Search"
-              type="search"
-            />
-            <button
-              onClick={this.searchInput}
-              type="button"
-              className="btn-search"
-            >
-              <BsSearch className="search-icon" />
-            </button>
-          </div>
-          <div className="profile-container-small">
-            {this.renderProfile()}
-
-            <hr />
-            <div>
-              <FilterGroup
-                employmentTypesList={employmentTypesList}
-                salaryRangesList={salaryRangesList}
-                changeEmployment={this.changeEmployment}
-                changeSalary={this.changeSalary}
-              />
-            </div>
-          </div>
-          <div className="render-jobs-container">{this.renderJobs()}</div>
         </div>
       </>
     )

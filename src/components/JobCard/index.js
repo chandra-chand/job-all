@@ -6,7 +6,7 @@ import {IoLocationSharp, IoBagRemoveSharp} from 'react-icons/io5'
 import './index.css'
 
 const JobCard = props => {
-  const {details} = props
+  const {jobDetails} = props
   const {
     id,
     companyLogoUrl,
@@ -16,7 +16,7 @@ const JobCard = props => {
     packagePerAnnum,
     rating,
     title,
-  } = details
+  } = jobDetails
 
   return (
     <li className="each-job-card">
